@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
       title: 'Courses App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        
       ),
       home: LoginPage(), // Set the login page as the home page
     );
@@ -43,7 +44,16 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Login'),
+        backgroundColor: Colors.cyan,
+        centerTitle: true,
+        title: Text('Login',
+          style: TextStyle(
+            color: const Color.fromARGB(255, 6, 102, 9),
+            fontWeight: FontWeight.bold
+            
+          )      
+        ),
+        
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -52,7 +62,9 @@ class _LoginPageState extends State<LoginPage> {
             TextField(
               controller: _usernameController,
               decoration: InputDecoration(labelText: 'Username'),
+              
             ),
+            SizedBox(height: 20),
             TextField(
               controller: _passwordController,
               decoration: InputDecoration(labelText: 'Password'),
