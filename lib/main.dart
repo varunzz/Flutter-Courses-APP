@@ -57,17 +57,28 @@ class _LoginPageState extends State<LoginPage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
+        child: 
+          Column(
           children: [
             TextField(
               controller: _usernameController,
-              decoration: InputDecoration(labelText: 'Username'),
+              decoration: InputDecoration(
+                labelText: 'Username',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                ),
+              ),
               
-            ),
             SizedBox(height: 20),
             TextField(
               controller: _passwordController,
-              decoration: InputDecoration(labelText: 'Password'),
+              decoration: InputDecoration(
+                labelText: 'Password',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                  ),
+              ),
               obscureText: true,
             ),
             SizedBox(height: 20),
@@ -75,7 +86,7 @@ class _LoginPageState extends State<LoginPage> {
               onPressed: _login,
               child: Text('Login'),
             ),
-          ],
+            ],
         ),
       ),
     );
